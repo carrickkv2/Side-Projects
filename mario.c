@@ -1,4 +1,3 @@
-#include <cs50.h>
 #include <stdio.h>
 
 void height(int h);
@@ -9,9 +8,10 @@ int main(void)
     int heightt;
     do
     {
-        heightt = get_int("How tall do you want your pyramid to be: ");
+        printf("How tall do you want your pyramid to be: ");
+        scanf("%d", &heightt);
     }
-    while (heightt < 0 || heightt > 8);
+    while (heightt < 1 || heightt > 8);
 
     height(heightt);
 }
